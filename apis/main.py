@@ -19,7 +19,7 @@ docsearch = FAISS.load_local(
     OpenAIEmbeddings(api_key=api_key, model="embeddingModel"),
     allow_dangerous_deserialization=True
 )
-retriever = docsearch.as_retriever(search_kwargs={"k": 40})
+retriever = docsearch.as_retriever(search_kwargs={"k": 10})
 
 app = FastAPI()
 

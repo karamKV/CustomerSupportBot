@@ -175,10 +175,10 @@ def main():
         experiment_name="Dense_Fixed_Text_Experiment",
         experiment_type="Dense_Fixed",
         model_config="",
-        retriever_accuracy=0.78,
-        validation_accuracy=0.75,
+        retriever_accuracy=0.68,
+        validation_accuracy=0.64,
         relevance_score=0.72,
-        groundedness_score=0.80,
+        groundedness_score=0.69,
         avg_response_time=0.45
     )
     
@@ -186,48 +186,59 @@ def main():
     tracker.update_experiment_metrics(
         experiment_name="Sparse_Retrieval_Experiment", 
         experiment_type="Sparse",
-        model_config="",
-        retriever_accuracy=0.82,
-        validation_accuracy=0.79,
-        relevance_score=0.75,
-        groundedness_score=0.85,
-        avg_response_time=0.35
+        model_config="KeyWord Based Search , BM 25",
+        retriever_accuracy=0.58,
+        validation_accuracy=0.59,
+        relevance_score=0.65,
+        groundedness_score=0.45,
+        avg_response_time=0.43
     )
     
     # Hybrid Retrieval Experiment
     tracker.update_experiment_metrics(
         experiment_name="Hybrid_Retrieval_Experiment",
         experiment_type="Hybrid",
-        model_config="",
-        retriever_accuracy=0.80,
+        model_config="Embedding Based Search",
+        retriever_accuracy=0.74,
         validation_accuracy=0.77,
         relevance_score=0.76,
         groundedness_score=0.83,
-        avg_response_time=0.55
+        avg_response_time=0.43
     )
     
     # Dense Retrieval Semantic Experiment
     tracker.update_experiment_metrics(
         experiment_name="Dense_Semantic_Experiment",
         experiment_type="Dense_Semantic", 
-        model_config="",
-        retriever_accuracy=0.84,
-        validation_accuracy=0.81,
+        model_config="Embedding + KEywords Based Search",
+        retriever_accuracy=0.76,
+        validation_accuracy=0.73,
         relevance_score=0.79,
         groundedness_score=0.87,
-        avg_response_time=0.42
+        avg_response_time=0.44
     )
     
     # Dense Retrieval Contextual Experiment
     tracker.update_experiment_metrics(
         experiment_name="Dense_Contextual_Experiment",
         experiment_type="Dense_Contextual",
-        model_config="", 
-        retriever_accuracy=0.91,
-        validation_accuracy=0.88,
+        model_config="CHunks were contextualized and Embedding Based Search", 
+        retriever_accuracy=0.81,
+        validation_accuracy=0.78,
         relevance_score=0.85,
-        groundedness_score=0.93,
-        avg_response_time=0.48
+        groundedness_score=0.83,
+        avg_response_time=0.43
+    )
+
+    tracker.update_experiment_metrics(
+        experiment_name="Metadata_Filtering_Dense_Contextual_Experiment",
+        experiment_type="Metadat_Contextual_dense",
+        model_config="Metadata FIltering APplied Based ON Category,CHunks were contextualized and Embedding Based Search ", 
+        retriever_accuracy=0.83,
+        validation_accuracy=0.79,
+        relevance_score=0.86,
+        groundedness_score=0.89,
+        avg_response_time=0.43
     )
         
     # Get metrics summary

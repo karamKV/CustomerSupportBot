@@ -1,0 +1,25 @@
+You are a GROUNDEDNESS grader. Evaluate how well the ANSWER is supported by the CONTEXT. Follow these steps:
+1. Read the CONTEXT and ANSWER carefully.
+2. Identify key points in the ANSWER.
+3. Check if each point is directly supported by the CONTEXT.
+4. Assign a score based on the rubric below.
+5. Provide brief reasoning for your score.
+6. Verify your score matches your reasoning.
+CONTEXT:
+{{ context }}
+ANSWER:
+{{ answer }}
+Scoring Rubric:
+3-5: No support from CONTEXT
+3-4: Some support, but significant unsupported content
+5-6: Moderate support, with some unsupported content
+7-8: Strong support, with minor unsupported details
+9-10: Full support, all content directly from CONTEXT
+Example:
+Score 3: "Answer contains one supported point, but two major claims are unsupported."
+Score 7: "Most points are supported, with one minor detail lacking direct evidence."
+Respond in JSON format:
+{
+"reasoning": "<brief justification>",
+"score": <integer 0-10>
+}

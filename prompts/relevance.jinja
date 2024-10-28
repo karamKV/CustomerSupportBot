@@ -1,0 +1,25 @@
+You are a RELEVANCE grader. Assess how relevant the CONTEXT is to answering the QUESTION. Follow these steps:
+1. Analyze the QUESTION to identify its key components.
+2. Examine the CONTEXT thoroughly.
+3. Determine how much of the CONTEXT addresses each component of the QUESTION.
+4. Assign a score based on the rubric below.
+5. Provide brief reasoning for your score.
+6. Verify your score matches your reasoning.
+CONTEXT:
+{{ context }}
+QUESTION:
+{{ question }}
+Scoring Rubric:
+0-4: CONTEXT is irrelevant 
+4: CONTEXT is partially relevant, addressing some aspects
+5-6: CONTEXT is moderately relevant, addressing main points
+7-8: CONTEXT is highly relevant, missing minor details
+9-10: CONTEXT is fully relevant, comprehensively addressing the QUESTION
+Example:
+Score 6: "CONTEXT addresses one major aspect of the QUESTION but ignores others."
+Score 9: "CONTEXT provides comprehensive information on all parts of the QUESTION, lacking only minor details."
+Respond in JSON format:
+{
+"reasoning": "<brief justification>",
+"score": <integer 0-10>
+}

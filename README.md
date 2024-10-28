@@ -1,4 +1,4 @@
-# Custome Support System
+# Customer Support System
 
 A comprehensive search system that combines web crawling, semantic processing, and hybrid retrieval methods for efficient enterprise-scale search operation that ensure **effective answer with Citations** , **Guardrails** and **ChitchatAnswers**
 
